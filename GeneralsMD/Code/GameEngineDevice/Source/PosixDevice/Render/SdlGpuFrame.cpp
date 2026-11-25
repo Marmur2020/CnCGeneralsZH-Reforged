@@ -193,6 +193,23 @@ SdlGpuFrame * SdlGpuFrame::Create(RenderWindow window, unsigned int width, unsig
 	frame->GpuDevice = SDL_CreateGPUDevice(SDL_GPU_SHADERFORMAT_SPIRV | SDL_GPU_SHADERFORMAT_MSL, debug, NULL);
 	if (frame->GpuDevice == NULL) {
 		error = std::string("SDL_CreateGPUDevice: ") + SDL_GetError();
+		// Older Intel Macs (Haswell/Broadwell) only expose MTLGPUFamilyMac1. SDL3 allows them when
+		// opted in, provided the renderer never writes to sRGB textures (we use UNORM/SDR targets).
+		if (const SDL_PropertiesID props = SDL_CreateProperties()) {
+			SDL_SetBooleanProperty(props, SDL_PROP_GPU_DEVICE_CREATE_SHADERS_SPIRV_BOOLEAN, true);
+			SDL_SetBooleanProperty(props, SDL_PROP_GPU_DEVICE_CREATE_SHADERS_MSL_BOOLEAN, true);
+			SDL_SetBooleanProperty(props, SDL_PROP_GPU_DEVICE_CREATE_DEBUGMODE_BOOLEAN, debug);
+			SDL_SetBooleanProperty(props, SDL_PROP_GPU_DEVICE_CREATE_METAL_ALLOW_MACFAMILY1_BOOLEAN, true);
+			frame->GpuDevice = SDL_CreateGPUDeviceWithProperties(props);
+			if (frame->GpuDevice == NULL) {
+				error = std::string("SDL_CreateGPUDevice: ") + SDL_GetError();
+			} else {
+				error.clear();
+			}
+			SDL_DestroyProperties(props);
+		}
+	}
+	if (frame->GpuDevice == NULL) {
 		delete frame;
 		return NULL;
 	}
