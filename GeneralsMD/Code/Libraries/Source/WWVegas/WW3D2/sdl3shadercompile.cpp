@@ -25,6 +25,7 @@
 
 #include <string.h>
 
+#include <atomic>
 #include <mutex>
 
 namespace {
@@ -204,15 +205,40 @@ SDL_GPUShader * SDL3_Create_Shader(SDL_GPUDevice * device, const std::vector<uns
 		std::string msl;
 		if (!SDL3_Translate_SPIRV_To_MSL(spirv, vertex_stage, msl, log)) return NULL;
 		// Match the engine FP contract: physical water must be identical across shader variants.
-		msl = "#pragma clang fp contract(off) reassociate(off)\n"+msl;
-		SDL_GPUShaderCreateInfo create = {};
-		create.code = (const Uint8 *)msl.c_str(); create.code_size = msl.size()+1;
-		// All input entry points here are main, cleansed by SPIRV-Cross to main0.
-		create.entrypoint = "main0"; create.format = SDL_GPU_SHADERFORMAT_MSL;
-		create.stage = vertex_stage ? SDL_GPU_SHADERSTAGE_VERTEX : SDL_GPU_SHADERSTAGE_FRAGMENT;
-		create.num_samplers = resources.num_samplers;
-		create.num_uniform_buffers = resources.num_uniform_buffers;
-		shader = SDL_CreateGPUShader(device, &create);
+		// Older Metal compilers (e.g. macOS 12 Monterey / Metal 2.4) reject `reassociate(off)`
+		// on `#pragma clang fp`; keep `contract(off)` everywhere and gate `reassociate(off)`
+		// on Metal >= 3.0 with a runtime fallback if the driver still refuses it.
+		static std::atomic<bool> reassociate_supported{true};
+		auto compile_msl = [&](const char * pragma_prefix) -> SDL_GPUShader * {
+			const std::string source = std::string(pragma_prefix) + msl;
+			SDL_GPUShaderCreateInfo create = {};
+			create.code = (const Uint8 *)source.c_str();
+			create.code_size = source.size() + 1;
+			// All input entry points here are main, cleansed by SPIRV-Cross to main0.
+			create.entrypoint = "main0";
+			create.format = SDL_GPU_SHADERFORMAT_MSL;
+			create.stage = vertex_stage ? SDL_GPU_SHADERSTAGE_VERTEX : SDL_GPU_SHADERSTAGE_FRAGMENT;
+			create.num_samplers = resources.num_samplers;
+			create.num_uniform_buffers = resources.num_uniform_buffers;
+			return SDL_CreateGPUShader(device, &create);
+		};
+		if (reassociate_supported.load(std::memory_order_relaxed)) {
+			shader = compile_msl(
+				"#if defined(__METAL_VERSION__) && __METAL_VERSION__ >= 300\n"
+				"#pragma clang fp contract(off) reassociate(off)\n"
+				"#else\n"
+				"#pragma clang fp contract(off)\n"
+				"#endif\n");
+			if (shader == NULL) {
+				SDL_ClearError();
+				shader = compile_msl("#pragma clang fp contract(off)\n");
+				if (shader != NULL) {
+					reassociate_supported.store(false, std::memory_order_relaxed);
+				}
+			}
+		} else {
+			shader = compile_msl("#pragma clang fp contract(off)\n");
+		}
 	} else {
 		shader = SDL_ShaderCross_CompileGraphicsShaderFromSPIRV(device, &info, &resources, 0);
 	}
