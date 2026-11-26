@@ -25,7 +25,7 @@ $work = Join-Path $env:TEMP 'zhr-vendor'
 
 function Step($message) { Write-Host "[vendor] $message" }
 
-function Get-File($url, $destination) {
+function Get-File($url, $destination, [int] $maxTime = 45, [int] $retries = 1) {
   if (Test-Path $destination) { return $destination }
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $destination) | Out-Null
   Step "downloading $(Split-Path -Leaf $destination)"
@@ -33,14 +33,14 @@ function Get-File($url, $destination) {
   if (Test-Path $part) { Remove-Item $part -Force -ErrorAction SilentlyContinue }
   $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
   if ($curl) {
-    & $curl.Source -fsSL --retry 3 --retry-delay 2 --connect-timeout 20 --max-time 180 $url -o $part
+    & $curl.Source -fsSL --retry $retries --retry-delay 2 --connect-timeout 10 --max-time $maxTime $url -o $part
     if ($LASTEXITCODE -ne 0 -or -not (Test-Path $part)) {
       Remove-Item $part -Force -ErrorAction SilentlyContinue
       throw "could not download $url (curl exit $LASTEXITCODE)"
     }
     Move-Item $part $destination -Force
   } else {
-    Invoke-WebRequest -Uri $url -OutFile $part -UseBasicParsing -TimeoutSec 60
+    Invoke-WebRequest -Uri $url -OutFile $part -UseBasicParsing -TimeoutSec $maxTime
     Move-Item $part $destination -Force
   }
   return $destination
@@ -80,7 +80,7 @@ function Install-Zlib {
   if ((Test-Path (Join-Path $destination 'deflate.c')) -and -not $Force) { return }
   $archivePath = Join-Path $work 'zlib-1.1.4.tar.gz'
   try {
-    $archive = Get-File 'https://zlib.net/fossils/zlib-1.1.4.tar.gz' $archivePath
+    $archive = Get-File 'https://zlib.net/fossils/zlib-1.1.4.tar.gz' $archivePath -maxTime 15 -retries 0
   } catch {
     Step "zlib.net failed ($($_.Exception.Message)), falling back to GitHub mirror"
     $archive = Get-File 'https://github.com/madler/zlib/archive/refs/tags/v1.1.4.tar.gz' $archivePath
