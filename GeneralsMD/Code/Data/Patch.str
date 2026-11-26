@@ -7770,6 +7770,18 @@ CONTROLBAR:ToolTipUkraineVehicleHimars
 "Long-range precision rocket artillery system."
 END
 
+OBJECT:UkraineVehicleNeptune
+"RK-360MC Neptune"
+END
+
+CONTROLBAR:ConstructUkraineVehicleNeptune
+"&Neptune"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleNeptune
+"RK-360MC Neptune mobile cruise missile launcher.\nFires across the entire map with pinpoint accuracy.\nLong reload time (40s)."
+END
+
 OBJECT:UkraineVehicleMi8
 "Mi-8MSB Gunship"
 END
@@ -7780,6 +7792,18 @@ END
 
 CONTROLBAR:ToolTipUkraineVehicleMi8
 "Armed transport and fire-support helicopter."
+END
+
+OBJECT:UkraineJetMig29
+"MiG-29 Fulcrum"
+END
+
+CONTROLBAR:ConstructUkraineJetMig29
+"MiG-&29"
+END
+
+CONTROLBAR:ToolTipUkraineJetMig29
+"Frontline multirole fighter effective against aircraft and armor."
 END
 
 OBJECT:UkraineJetF16

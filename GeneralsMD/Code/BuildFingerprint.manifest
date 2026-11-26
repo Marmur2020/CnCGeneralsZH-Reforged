@@ -29,6 +29,7 @@ Data/Art/Textures/ReforgedBarGLACenter.tga
 Data/Art/Textures/ReforgedBarGLALeft.tga
 Data/Art/Textures/ReforgedBarGLARight.tga
 Data/Art/Textures/ReforgedBlastV.dds
+Data/Art/Textures/ReforgedFactionIcons.tga
 Data/Art/Textures/ReforgedFactionTurkiye.tga
 Data/Art/Textures/ReforgedFireLoop.dds
 Data/Art/Textures/ReforgedFoliage.tga
@@ -668,6 +669,8 @@ Data/Art/W3D/TRWARFAC_DR.W3D
 Data/Art/W3D/TRWARFAC_E.W3D
 Data/Art/W3D/TRWARFAC_R.W3D
 Data/Art/W3D/TRWARFAC_SC.W3D
+Data/Art/W3D/UKBOHDANA.W3D
+Data/Art/W3D/UKBOHDANA_D.W3D
 Data/Art/W3D/ZBZBRT_SKN.W3D
 Data/Art/W3D/ZBZOMB_ATA.W3D
 Data/Art/W3D/ZBZOMB_SKN.W3D
@@ -1240,6 +1243,7 @@ Data/INI/EvaReforged.ini
 Data/INI/FXListReforged.ini
 Data/INI/FixesReforged.ini
 Data/INI/MappedImages/HandCreated/ReforgedBarChinaBeacon.ini
+Data/INI/MappedImages/HandCreated/ReforgedFactionIcons.ini
 Data/INI/MappedImages/HandCreated/ReforgedForceAttack.ini
 Data/INI/MappedImages/HandCreated/ReforgedGuardShield.ini
 Data/INI/MappedImages/HandCreated/ReforgedHudAmericaCommandBar.ini
