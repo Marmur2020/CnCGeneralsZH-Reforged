@@ -281,7 +281,7 @@ GameFont *fontOf( const Look::FontSpec &spec )
 AsciiString prefixOf( const Player *player )
 {
 	const AsciiString side = player != NULL ? player->getSide() : AsciiString( "America" );
-	if( side.startsWith( "China" ) )
+	if( side.startsWith( "China" ) || side.startsWith( "Russia" ) )
 		return AsciiString( Look::PREFIX_CHINA );
 	if( side.startsWith( "GLA" ) )
 		return AsciiString( Look::PREFIX_GLA );

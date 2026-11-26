@@ -1401,7 +1401,7 @@ ControlBarScheme *ControlBarSchemeManager::findSchemeForFaction( const AsciiStri
 	if( scheme != NULL )
 		return scheme;
 
-	if( side.startsWithNoCase( "China" ) )
+	if( side.startsWithNoCase( "China" ) || side.startsWithNoCase( "Russia" ) )
 		return findSchemeForSide( AsciiString( "China" ), TRUE );
 	if( side.startsWithNoCase( "GLA" ) )
 		return findSchemeForSide( AsciiString( "GLA" ), TRUE );
@@ -2078,4 +2078,3 @@ static void animSlideRight( ControlBarSchemeAnimation *anim )
 
 
 }
-

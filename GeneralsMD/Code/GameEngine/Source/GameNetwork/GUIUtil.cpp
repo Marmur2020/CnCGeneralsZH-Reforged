@@ -323,10 +323,13 @@ void PopulateColorComboBox(Int comboBox, GameWindow *comboArray[], GameInfo *myG
 
 // -----------------------------------------------------------------------------
 
-/// a side Direct Strike leaves out: Turkiye is not in the mode (LANE-MODE.md, "Sides")
+/// a side Direct Strike leaves out: custom factions without a lane pool (LANE-MODE.md, "Sides")
 static Bool notInDirectStrike(const PlayerTemplate *fac)
 {
-	return fac->getSide().compareNoCase("Turkiye") == 0;
+	const AsciiString &side = fac->getSide();
+	return side.compareNoCase("Turkiye") == 0
+		|| side.compareNoCase("Ukraine") == 0
+		|| side.compareNoCase("Russia") == 0;
 }
 
 void PopulatePlayerTemplateComboBox(Int comboBox, GameWindow *comboArray[], GameInfo *myGame, Bool allowObservers, Bool directStrike)

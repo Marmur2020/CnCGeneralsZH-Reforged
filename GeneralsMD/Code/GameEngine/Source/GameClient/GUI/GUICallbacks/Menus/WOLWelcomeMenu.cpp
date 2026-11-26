@@ -293,7 +293,7 @@ static Int quickMatchArmy( void )
 	const Int pick = pref.getSide();
 	const PlayerTemplate *army = pick >= 0 && pick < ThePlayerTemplateStore->getPlayerTemplateCount()
 		? ThePlayerTemplateStore->getNthPlayerTemplate( pick ) : NULL;
-	if (army == NULL || !army->isPlayableSide() || army->getSide() == "Boss")
+	if (army == NULL || !army->isPlayableSide() || army->isRandomExcluded() || army->getSide() == "Boss")
 		return PLAYERTEMPLATE_RANDOM;
 	const AsciiString base = army->getBaseSide();
 	return base == "America" || base == "China" || base == "GLA" ? pick : PLAYERTEMPLATE_RANDOM;

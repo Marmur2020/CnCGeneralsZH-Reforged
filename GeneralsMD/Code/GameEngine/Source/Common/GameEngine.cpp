@@ -1413,6 +1413,8 @@ void GameEngine::init( int argc, char *argv[] )
 		/* Turkiye's own weapons.  OVERWRITE rather than MULTIFILE: a patch file may only edit a weapon
 			 that exists, and every one of these is new. */
 		ini.load( AsciiString( "Data\\INI\\TurkiyeWeaponReforged.ini" ), INI_LOAD_OVERWRITE, &xferCRC );
+		ini.load( AsciiString( "Data\\INI\\UkraineWeaponReforged.ini" ), INI_LOAD_OVERWRITE, &xferCRC );
+		ini.load( AsciiString( "Data\\INI\\RussiaWeaponReforged.ini" ), INI_LOAD_OVERWRITE, &xferCRC );
 		initSubsystem(TheObjectCreationListStore,"TheObjectCreationListStore", MSGNEW("GameEngineSubsystem") ObjectCreationListStore(), &xferCRC, "Data\\INI\\Default\\ObjectCreationList.ini", "Data\\INI\\ObjectCreationList.ini");
 		/* Lists EA left out or got wrong, before any object names one: a list parsed again is cleared
 			 and replaced whole, and a new name is simply added. */
@@ -1447,6 +1449,8 @@ void GameEngine::init( int argc, char *argv[] )
 		ini.load( AsciiString( "Data\\INI\\FixesReforged.ini" ), INI_LOAD_MULTIFILE, &xferCRC );
 		// Turkiye's objects, reskins of the American ones, so they come after the balance and fixes they copy
 		ini.load( AsciiString( "Data\\INI\\TurkiyeReforged.ini" ), INI_LOAD_MULTIFILE, &xferCRC );
+		ini.load( AsciiString( "Data\\INI\\UkraineReforged.ini" ), INI_LOAD_MULTIFILE, &xferCRC );
+		ini.load( AsciiString( "Data\\INI\\RussiaReforged.ini" ), INI_LOAD_MULTIFILE, &xferCRC );
 		// The general's talents, ranks 6 to 10: each card a science and whatever it grants
 		ini.load( AsciiString( "Data\\INI\\TalentsReforged.ini" ), INI_LOAD_MULTIFILE, &xferCRC );
 		/* The Apocalypse mode's zombies, their locomotors and weapons: every name new, so OVERWRITE,

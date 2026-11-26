@@ -209,7 +209,7 @@ namespace
 //-------------------------------------------------------------------------------------------------
 Side sideOf( const AsciiString &side )
 {
-	if( side.startsWith( "China" ) )
+	if( side.startsWith( "China" ) || side.startsWith( "Russia" ) )
 		return SIDE_CHINA;
 	if( side.startsWith( "GLA" ) )
 		return SIDE_GLA;

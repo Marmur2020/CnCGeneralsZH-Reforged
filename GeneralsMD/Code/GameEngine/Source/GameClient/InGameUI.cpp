@@ -428,7 +428,7 @@ static HudCellStyle hudCellStyle( void )
 	style.cellH = style.cameoH + 2 * style.marginY;
 
 	const char *prefix = "America";
-	if( side.startsWith( "China" ) || side.startsWith( "Boss" ) )
+	if( side.startsWith( "China" ) || side.startsWith( "Boss" ) || side.startsWith( "Russia" ) )
 		prefix = "China";
 	else if( side.startsWith( "GLA" ) )
 		prefix = "Gla";
@@ -14340,5 +14340,4 @@ WindowMsgHandledType IdleWorkerSystem( GameWindow *window, UnsignedInt msg,
 	return MSG_HANDLED;
 
 }
-
 

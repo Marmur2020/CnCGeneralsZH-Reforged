@@ -1286,6 +1286,8 @@ Data/INI/ObjectCreationListReforged.ini
 Data/INI/ParticleSystemReforged.ini
 Data/INI/PlayerTemplateReforged.ini
 Data/INI/RankReforged.ini
+Data/INI/RussiaReforged.ini
+Data/INI/RussiaWeaponReforged.ini
 Data/INI/ScienceReforged.ini
 Data/INI/SkinsReforged.ini
 Data/INI/SpecialPowerReforged.ini
@@ -1293,6 +1295,8 @@ Data/INI/SpeechReforged.ini
 Data/INI/TalentsReforged.ini
 Data/INI/TurkiyeReforged.ini
 Data/INI/TurkiyeWeaponReforged.ini
+Data/INI/UkraineReforged.ini
+Data/INI/UkraineWeaponReforged.ini
 Data/INI/UpgradeReforged.ini
 Data/INI/VideoReforged.ini
 Data/INI/VoiceReforged.ini

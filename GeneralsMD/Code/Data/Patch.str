@@ -7467,3 +7467,1379 @@ END
 OBJECT:ApocalypseZombieBrute
 "Brute Zombie"
 END
+
+// ==== Ukraine faction strings =====================================================================
+
+INI:FactionUkraine
+"Ukraine"
+END
+
+SIDE:Ukraine
+"Ukraine"
+END
+
+TOOLTIP:BioStrategyLong_Ukraine
+"Ukraine combines NATO precision strike weapons, fast mobile artillery, drone swarms, and layered air defense with Starlink network targeting."
+END
+
+GUI:BioFeatures_Ukraine
+"Fast 2S22 Bohdana and HIMARS long-range artillery \n FPV kamikaze drones and Bukovel electronic warfare \n Patriot and Gepard air defense network"
+END
+
+OBJECT:UkraineCommandCenter
+"Command Center"
+END
+
+CONTROLBAR:ConstructUkraineCommandCenter
+"&Command Center"
+END
+
+OBJECT:UkrainePowerPlant
+"Power Plant"
+END
+
+CONTROLBAR:ConstructUkrainePowerPlant
+"&Power Plant"
+END
+
+OBJECT:UkraineSupplyCenter
+"Supply Center"
+END
+
+CONTROLBAR:ConstructUkraineSupplyCenter
+"&Supply Center"
+END
+
+OBJECT:UkraineBarracks
+"Barracks"
+END
+
+CONTROLBAR:ConstructUkraineBarracks
+"&Barracks"
+END
+
+OBJECT:UkraineWarFactory
+"War Factory"
+END
+
+CONTROLBAR:ConstructUkraineWarFactory
+"&War Factory"
+END
+
+OBJECT:UkraineAirfield
+"Airfield"
+END
+
+CONTROLBAR:ConstructUkraineAirfield
+"&Airfield"
+END
+
+OBJECT:UkraineStrategyCenter
+"Strategy Center"
+END
+
+CONTROLBAR:ConstructUkraineStrategyCenter
+"&Strategy Center"
+END
+
+CONTROLBAR:ToolTipUkraineStrategyCenter
+"Coordinates battle plans and unlocks advanced Ukrainian munitions and target classification."
+END
+
+OBJECT:UkrainePatriotBattery
+"Patriot Battery"
+END
+
+CONTROLBAR:ConstructUkrainePatriotBattery
+"&Patriot Battery"
+END
+
+OBJECT:UkraineFireBase
+"Forward Fire Base"
+END
+
+CONTROLBAR:ConstructUkraineFireBase
+"&Fire Base"
+END
+
+CONTROLBAR:ToolTipUkraineFireBase
+"Fortified artillery bunker with forward radar coverage that boosts nearby artillery range."
+END
+
+OBJECT:UkraineDropZone
+"Supply Drop Zone"
+END
+
+CONTROLBAR:ConstructUkraineDropZone
+"Drop &Zone"
+END
+
+CONTROLBAR:ToolTipUkraineDropZone
+"Periodically receives allied air-dropped supplies."
+END
+
+OBJECT:UkraineParticleCannon
+"Neptune Strike Uplink"
+END
+
+CONTROLBAR:ConstructUkraineParticleCannon
+"&Neptune Uplink"
+END
+
+CONTROLBAR:ToolTipUkraineParticleCannon
+"Strategic strike uplink."
+END
+
+OBJECT:UkraineVehicleDozer
+"Engineering Dozer"
+END
+
+CONTROLBAR:ConstructUkraineVehicleDozer
+"&Dozer"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleDozer
+"Constructs and repairs structures and clears mines."
+END
+
+OBJECT:UkraineVehicleSupplyHeli
+"Supply Chinook"
+END
+
+CONTROLBAR:ConstructUkraineVehicleSupplyHeli
+"&Chinook"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleSupplyHeli
+"Gathers supplies by air."
+END
+
+OBJECT:UkraineInfantryMalyuk
+"Assault Rifleman"
+END
+
+CONTROLBAR:ConstructUkraineInfantryMalyuk
+"&Rifleman"
+END
+
+CONTROLBAR:ToolTipUkraineInfantryMalyuk
+"Core infantry armed with Bren 2 / Malyuk rifles. Can capture buildings once upgraded."
+END
+
+OBJECT:UkraineInfantryStugna
+"Stugna AT Gunner"
+END
+
+CONTROLBAR:ConstructUkraineInfantryStugna
+"&Stugna Gunner"
+END
+
+CONTROLBAR:ToolTipUkraineInfantryStugna
+"Anti-tank and anti-air missile team."
+END
+
+OBJECT:UkraineInfantryFpv
+"FPV Drone Operator"
+END
+
+CONTROLBAR:ConstructUkraineInfantryFpv
+"&FPV Operator"
+END
+
+CONTROLBAR:ToolTipUkraineInfantryFpv
+"Launches fast kamikaze FPV drones against vehicles and infantry."
+END
+
+OBJECT:UkraineInfantrySpotter
+"Recon Spotter"
+END
+
+CONTROLBAR:ConstructUkraineInfantrySpotter
+"S&potter"
+END
+
+CONTROLBAR:ToolTipUkraineInfantrySpotter
+"Long-vision sniper and artillery spotter who designates targets for guided munitions."
+END
+
+OBJECT:UkraineInfantrySso
+"SSO Commando"
+END
+
+CONTROLBAR:ConstructUkraineInfantrySso
+"&SSO Commando"
+END
+
+CONTROLBAR:ToolTipUkraineInfantrySso
+"Elite special operations commando."
+END
+
+OBJECT:UkraineVehicleKozak
+"Kozak MRAP"
+END
+
+CONTROLBAR:ConstructUkraineVehicleKozak
+"&Kozak"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleKozak
+"Fast armored troop carrier with heavy machine gun."
+END
+
+OBJECT:UkraineVehicleMedic
+"Medical Evacuation Vehicle"
+END
+
+CONTROLBAR:ConstructUkraineVehicleMedic
+"&Evac Vehicle"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleMedic
+"Repairs nearby vehicles and heals infantry."
+END
+
+OBJECT:UkraineTankLeopard
+"Leopard 2A6"
+END
+
+CONTROLBAR:ConstructUkraineTankLeopard
+"&Leopard 2A6"
+END
+
+CONTROLBAR:ToolTipUkraineTankLeopard
+"Agile Western main battle tank with high-velocity cannon."
+END
+
+OBJECT:UkraineTankOplot
+"BM Oplot-M"
+END
+
+CONTROLBAR:ConstructUkraineTankOplot
+"&Oplot-M"
+END
+
+CONTROLBAR:ToolTipUkraineTankOplot
+"Heavy main battle tank with reactive armor."
+END
+
+OBJECT:UkraineVehicleGepard
+"Flakpanzer Gepard"
+END
+
+CONTROLBAR:ConstructUkraineVehicleGepard
+"&Gepard"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleGepard
+"Twin-35mm mobile anti-air autocannon against aircraft and drones."
+END
+
+OBJECT:UkraineVehicleBukovel
+"Bukovel-AD EW"
+END
+
+CONTROLBAR:ConstructUkraineVehicleBukovel
+"&Bukovel EW"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleBukovel
+"Mobile electronic warfare vehicle that jams enemy radar and disables vehicles."
+END
+
+OBJECT:UkraineVehicleBohdana
+"2S22 Bohdana"
+END
+
+CONTROLBAR:ConstructUkraineVehicleBohdana
+"&Bohdana SPH"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleBohdana
+"Inexpensive, fast, rapid-firing 155mm wheeled self-propelled howitzer with light armor."
+END
+
+OBJECT:UkraineVehicleHimars
+"M142 HIMARS"
+END
+
+CONTROLBAR:ConstructUkraineVehicleHimars
+"&HIMARS"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleHimars
+"Long-range precision rocket artillery system."
+END
+
+OBJECT:UkraineVehicleMi8
+"Mi-8MSB Gunship"
+END
+
+CONTROLBAR:ConstructUkraineVehicleMi8
+"&Mi-8 Gunship"
+END
+
+CONTROLBAR:ToolTipUkraineVehicleMi8
+"Armed transport and fire-support helicopter."
+END
+
+OBJECT:UkraineJetF16
+"F-16AM Viper"
+END
+
+CONTROLBAR:ConstructUkraineJetF16
+"&F-16AM"
+END
+
+CONTROLBAR:ToolTipUkraineJetF16
+"Multi-role fighter jet."
+END
+
+OBJECT:UkraineJetSu24
+"Su-24M Storm Shadow"
+END
+
+CONTROLBAR:ConstructUkraineJetSu24
+"&Su-24M"
+END
+
+CONTROLBAR:ToolTipUkraineJetSu24
+"Long-range stealth cruise-missile strike aircraft."
+END
+
+UPGRADE:UkraineBren2
+"Bren 2 Rifles"
+END
+
+CONTROLBAR:UpgradeUkraineBren2
+"&Bren 2 Rifles"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineBren2
+"Equips Assault Riflemen with modern NATO 5.56mm Bren 2 rifles."
+END
+
+UPGRADE:UkraineCbrn
+"Tactical Body Armor"
+END
+
+CONTROLBAR:UpgradeUkraineCbrn
+"&Body Armor"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineCbrn
+"Improves infantry survivability against weapons and toxins."
+END
+
+UPGRADE:UkraineThermal
+"Thermal Optics"
+END
+
+CONTROLBAR:UpgradeUkraineThermal
+"&Thermal Optics"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineThermal
+"Allows Recon Spotters to detect stealth units at greater range."
+END
+
+UPGRADE:UkraineExtendedRange
+"Base-Bleed Shells"
+END
+
+CONTROLBAR:UpgradeUkraineExtendedRange
+"&Extended Range"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineExtendedRange
+"Increases attack range of Bohdana and HIMARS artillery."
+END
+
+UPGRADE:UkrainePrecisionGuidance
+"Excalibur Guidance"
+END
+
+CONTROLBAR:UpgradeUkrainePrecisionGuidance
+"&Precision Guidance"
+END
+
+CONTROLBAR:ToolTipUpgradeUkrainePrecisionGuidance
+"Improves radar-guided hit chance for Bohdana, HIMARS, Patriot, F-16AM, and Stugna."
+END
+
+UPGRADE:UkraineArmorPack
+"Composite & ERA Armor"
+END
+
+CONTROLBAR:UpgradeUkraineArmorPack
+"&Armor Pack"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineArmorPack
+"Increases armor durability of Leopard 2A6 and BM Oplot-M tanks."
+END
+
+UPGRADE:UkraineWarheads
+"NATO Munitions"
+END
+
+CONTROLBAR:UpgradeUkraineWarheads
+"&NATO Munitions"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineWarheads
+"Increases weapon damage across Ukrainian forces."
+END
+
+UPGRADE:UkraineFortification
+"Reinforced Concrete"
+END
+
+CONTROLBAR:UpgradeUkraineFortification
+"&Fortification"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineFortification
+"Increases hit points of all Ukrainian structures."
+END
+
+UPGRADE:UkraineTargetClassification
+"Target Classification"
+END
+
+CONTROLBAR:UpgradeUkraineTargetClassification
+"&Target Classification"
+END
+
+CONTROLBAR:ToolTipUpgradeUkraineTargetClassification
+"Identifies enemy unit types inside radar coverage."
+END
+
+UPGRADE:UkraineLaserDesignation
+"Laser Designation"
+END
+
+UPGRADE:UkraineEarlyWarning
+"Early Warning"
+END
+
+UPGRADE:UkraineForwardRadar
+"Forward Radar"
+END
+
+SCIENCE:UkraineLaserDesignation
+"Laser Designation"
+END
+
+CONTROLBAR:ToolTipUkraineScienceLaserDesignation
+"Spotters and Mi-8s paint targets as radar coverage."
+END
+
+SCIENCE:UkraineEarlyWarning
+"Early Warning"
+END
+
+CONTROLBAR:ToolTipUkraineScienceEarlyWarning
+"Increases radar coverage radius by 25 percent."
+END
+
+SCIENCE:UkraineUavRecon
+"UAV Recon"
+END
+
+CONTROLBAR:ToolTipUkraineScienceUavRecon
+"Deploys a recon UAV providing radar coverage over the target area."
+END
+
+CONTROLBAR:UkraineUavRecon
+"UAV Recon"
+END
+
+CONTROLBAR:TooltipUkraineUavRecon
+"Deploys a recon UAV providing radar coverage over the target area."
+END
+
+SCIENCE:UkraineForwardRadar
+"Forward Radar"
+END
+
+CONTROLBAR:ToolTipUkraineScienceForwardRadar
+"Expands Fire Base radar coverage by 50 percent."
+END
+
+SCIENCE:UkraineDroneSwarm
+"FPV Drone Swarm"
+END
+
+SCIENCE:UkraineDroneSwarm2
+"FPV Drone Swarm II"
+END
+
+SCIENCE:UkraineDroneSwarm3
+"FPV Drone Swarm III"
+END
+
+CONTROLBAR:ToolTipUkraineScienceDroneSwarm
+"Launches loitering FPV drones against targets in the area (1, 3, or 5 drones)."
+END
+
+CONTROLBAR:UkraineDroneSwarm
+"FPV Drone Swarm"
+END
+
+CONTROLBAR:TooltipUkraineDroneSwarm
+"Launches loitering FPV drones against targets in the area."
+END
+
+SCIENCE:UkraineAirborne
+"Airborne Assault"
+END
+
+SCIENCE:UkraineAirborne2
+"Airborne Assault II"
+END
+
+SCIENCE:UkraineAirborne3
+"Airborne Assault III"
+END
+
+CONTROLBAR:ToolTipUkraineScienceAirborne
+"Paradrops riflemen, Stugna teams, and at rank 3 a Kozak MRAP."
+END
+
+CONTROLBAR:UkraineAirborne
+"Airborne Assault"
+END
+
+CONTROLBAR:TooltipUkraineAirborne
+"Paradrops Ukrainian assault forces at the target location."
+END
+
+SCIENCE:UkraineElectronicWarfare
+"Bukovel Jamming"
+END
+
+CONTROLBAR:ToolTipUkraineScienceElectronicWarfare
+"Blinds enemy radar and jams electronics in the target zone for 30 seconds."
+END
+
+CONTROLBAR:UkraineElectronicWarfare
+"EW Jamming"
+END
+
+CONTROLBAR:TooltipUkraineElectronicWarfare
+"Blinds enemy radar and jams electronics in the target zone for 30 seconds."
+END
+
+SCIENCE:UkraineAllyAid
+"Allied Airlift"
+END
+
+CONTROLBAR:ToolTipUkraineScienceAllyAid
+"Calls cargo planes carrying selected reinforcements to an ally or yourself."
+END
+
+CONTROLBAR:UkraineAllyAid
+"Allied Airlift"
+END
+
+CONTROLBAR:TooltipUkraineAllyAid
+"Calls cargo planes carrying selected reinforcements."
+END
+
+SCIENCE:UkraineStarlink
+"Starlink Uplink"
+END
+
+CONTROLBAR:ToolTipUkraineScienceStarlink
+"Provides map-wide radar coverage for 45 seconds."
+END
+
+CONTROLBAR:UkraineStarlink
+"Starlink Uplink"
+END
+
+CONTROLBAR:TooltipUkraineStarlink
+"Provides map-wide radar coverage for 45 seconds."
+END
+
+SCIENCE:UkraineNeptuneStrike
+"R-360 Neptune"
+END
+
+CONTROLBAR:ToolTipUkraineScienceNeptuneStrike
+"Fires a radar-guided R-360 Neptune cruise missile at the target area."
+END
+
+CONTROLBAR:UkraineNeptuneStrike
+"Neptune Strike"
+END
+
+CONTROLBAR:TooltipUkraineNeptuneStrike
+"Fires a radar-guided R-360 Neptune cruise missile at the target area."
+END
+
+SCIENCE:UkraineCommandoRaid
+"SSO Raid"
+END
+
+CONTROLBAR:ToolTipUkraineScienceCommandoRaid
+"Drops an SSO Commando and two Recon Spotters by parachute."
+END
+
+CONTROLBAR:UkraineCommandoRaid
+"SSO Raid"
+END
+
+CONTROLBAR:TooltipUkraineCommandoRaid
+"Drops an SSO Commando and two Recon Spotters by parachute."
+END
+
+SCIENCE:UkraineTalent6A
+"Prefabrication"
+END
+
+CONTROLBAR:ToolTipUkraineTalent6A
+"Structures cost 15 percent less."
+END
+
+SCIENCE:UkraineTalent6B
+"Mobilization"
+END
+
+CONTROLBAR:ToolTipUkraineTalent6B
+"Infantry costs 15 percent less."
+END
+
+SCIENCE:UkraineTalent7A
+"Oplot Armor"
+END
+
+CONTROLBAR:ToolTipUkraineTalent7A
+"BM Oplot-M gains 120 hit points."
+END
+
+SCIENCE:UkraineTalent7B
+"Air Optics"
+END
+
+CONTROLBAR:ToolTipUkraineTalent7B
+"Mi-8 and F-16AM gain 25 percent sight range."
+END
+
+SCIENCE:UkraineTalent8A
+"Bunker Concrete"
+END
+
+CONTROLBAR:ToolTipUkraineTalent8A
+"Forward Fire Base gains 350 hit points."
+END
+
+SCIENCE:UkraineTalent8B
+"AT Teams"
+END
+
+CONTROLBAR:ToolTipUkraineTalent8B
+"Stugna AT Gunner gains 40 hit points."
+END
+
+SCIENCE:UkraineTalent9A
+"Swarm Density"
+END
+
+CONTROLBAR:ToolTipUkraineTalent9A
+"FPV Drone Swarm launches 2 extra drones."
+END
+
+SCIENCE:UkraineTalent9B
+"Heavy Airlift"
+END
+
+CONTROLBAR:ToolTipUkraineTalent9B
+"Airborne Assault drops 4 extra troops."
+END
+
+SCIENCE:UkraineTalent10A
+"Heavy Warhead"
+END
+
+CONTROLBAR:ToolTipUkraineTalent10A
+"R-360 Neptune blast radius increases by 25 percent."
+END
+
+SCIENCE:UkraineTalent10B
+"Elite Cadre"
+END
+
+CONTROLBAR:ToolTipUkraineTalent10B
+"SSO Commandos are trained as veterans."
+END
+
+// ==== Russia faction strings ======================================================================
+
+INI:FactionRussia
+"Russia"
+END
+
+SIDE:Russia
+"Russia"
+END
+
+TOOLTIP:BioStrategyLong_Russia
+"Russia relies on heavy armor, thermobaric rocket salvos, long-range MiG UMPK glide bombs, Lancet loitering drones, and Iskander strikes."
+END
+
+GUI:BioFeatures_Russia
+"MiG jets drop long-range inaccurate UMPK KAB bombs \n T-90M armor, TOS-1A Solntsepek, and Msta-S artillery \n Orlan recon, Lancet drones, and Iskander strikes"
+END
+
+OBJECT:RussiaCommandCenter
+"Command Center"
+END
+
+CONTROLBAR:ConstructRussiaCommandCenter
+"&Command Center"
+END
+
+OBJECT:RussiaPowerPlant
+"Power Plant"
+END
+
+CONTROLBAR:ConstructRussiaPowerPlant
+"&Power Plant"
+END
+
+OBJECT:RussiaSupplyCenter
+"Supply Center"
+END
+
+CONTROLBAR:ConstructRussiaSupplyCenter
+"&Supply Center"
+END
+
+OBJECT:RussiaBarracks
+"Barracks"
+END
+
+CONTROLBAR:ConstructRussiaBarracks
+"&Barracks"
+END
+
+OBJECT:RussiaWarFactory
+"War Factory"
+END
+
+CONTROLBAR:ConstructRussiaWarFactory
+"&War Factory"
+END
+
+OBJECT:RussiaAirfield
+"Airfield"
+END
+
+CONTROLBAR:ConstructRussiaAirfield
+"&Airfield"
+END
+
+OBJECT:RussiaPropagandaCenter
+"Command HQ"
+END
+
+CONTROLBAR:ConstructRussiaPropagandaCenter
+"Command &HQ"
+END
+
+CONTROLBAR:ToolTipRussiaPropagandaCenter
+"Unlocks strategic weapons and warhead upgrades."
+END
+
+OBJECT:RussiaSpeakerTower
+"Radar Mast"
+END
+
+CONTROLBAR:ConstructRussiaSpeakerTower
+"&Radar Mast"
+END
+
+CONTROLBAR:ToolTipRussiaSpeakerTower
+"Forward radar and morale tower extending artillery range."
+END
+
+OBJECT:RussiaBunker
+"Fortified Bunker"
+END
+
+CONTROLBAR:ConstructRussiaBunker
+"&Bunker"
+END
+
+CONTROLBAR:ToolTipRussiaBunker
+"Garrisonable concrete defense bunker."
+END
+
+OBJECT:RussiaGattlingCannon
+"ZSU Autocannon"
+END
+
+CONTROLBAR:ConstructRussiaGattlingCannon
+"&ZSU Cannon"
+END
+
+CONTROLBAR:ToolTipRussiaGattlingCannon
+"Rapid-fire anti-infantry and anti-air defense turret."
+END
+
+OBJECT:RussiaIskanderSilo
+"Iskander Complex"
+END
+
+CONTROLBAR:ConstructRussiaIskanderSilo
+"&Iskander Complex"
+END
+
+CONTROLBAR:ToolTipRussiaIskanderSilo
+"Strategic missile complex."
+END
+
+OBJECT:RussiaVehicleDozer
+"Engineering Dozer"
+END
+
+CONTROLBAR:ConstructRussiaVehicleDozer
+"&Dozer"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleDozer
+"Constructs and repairs structures and clears mines."
+END
+
+OBJECT:RussiaVehicleSupplyTruck
+"Supply KamAZ"
+END
+
+CONTROLBAR:ConstructRussiaVehicleSupplyTruck
+"&Supply Truck"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleSupplyTruck
+"Gathers supplies from supply docks."
+END
+
+OBJECT:RussiaInfantryStrelok
+"Motor Rifleman"
+END
+
+CONTROLBAR:ConstructRussiaInfantryStrelok
+"&Rifleman"
+END
+
+CONTROLBAR:ToolTipRussiaInfantryStrelok
+"Line infantry armed with AK-12 rifles. Can capture buildings once upgraded."
+END
+
+OBJECT:RussiaInfantryKornet
+"Kornet AT Team"
+END
+
+CONTROLBAR:ConstructRussiaInfantryKornet
+"&Kornet Team"
+END
+
+CONTROLBAR:ToolTipRussiaInfantryKornet
+"Anti-tank and anti-air guided missile team."
+END
+
+OBJECT:RussiaInfantryLancet
+"Lancet Operator"
+END
+
+CONTROLBAR:ConstructRussiaInfantryLancet
+"&Lancet Operator"
+END
+
+CONTROLBAR:ToolTipRussiaInfantryLancet
+"Launches loitering Lancet kamikaze drones."
+END
+
+OBJECT:RussiaInfantryHacker
+"Cyber Operator"
+END
+
+CONTROLBAR:ConstructRussiaInfantryHacker
+"&Cyber Operator"
+END
+
+CONTROLBAR:ToolTipRussiaInfantryHacker
+"Generates funds and disables enemy structures."
+END
+
+OBJECT:RussiaInfantrySpetsnaz
+"Spetsnaz Recon"
+END
+
+CONTROLBAR:ConstructRussiaInfantrySpetsnaz
+"&Spetsnaz"
+END
+
+CONTROLBAR:ToolTipRussiaInfantrySpetsnaz
+"Stealth commando able to capture buildings and disrupt vehicles."
+END
+
+OBJECT:RussiaVehicleBtr82
+"BTR-82A"
+END
+
+CONTROLBAR:ConstructRussiaVehicleBtr82
+"&BTR-82A"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleBtr82
+"Armored personnel carrier with 30mm autocannon."
+END
+
+OBJECT:RussiaTankT72
+"T-72B3M"
+END
+
+CONTROLBAR:ConstructRussiaTankT72
+"&T-72B3M"
+END
+
+CONTROLBAR:ToolTipRussiaTankT72
+"Mass-produced main battle tank."
+END
+
+OBJECT:RussiaTankT90M
+"T-90M Proryv"
+END
+
+CONTROLBAR:ConstructRussiaTankT90M
+"&T-90M Proryv"
+END
+
+CONTROLBAR:ToolTipRussiaTankT90M
+"Heavy main battle tank with Relikt reactive armor."
+END
+
+OBJECT:RussiaVehiclePantsir
+"Pantsir-S1"
+END
+
+CONTROLBAR:ConstructRussiaVehiclePantsir
+"&Pantsir-S1"
+END
+
+CONTROLBAR:ToolTipRussiaVehiclePantsir
+"Mobile anti-air gun and missile defense vehicle."
+END
+
+OBJECT:RussiaVehicleKrasukha
+"Krasukha-4 EW"
+END
+
+CONTROLBAR:ConstructRussiaVehicleKrasukha
+"&Krasukha-4"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleKrasukha
+"Electronic warfare vehicle that jams radar and disables enemy vehicles."
+END
+
+OBJECT:RussiaVehicleSolntsepek
+"TOS-1A Solntsepek"
+END
+
+CONTROLBAR:ConstructRussiaVehicleSolntsepek
+"&Solntsepek"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleSolntsepek
+"Heavy thermobaric multiple rocket launcher."
+END
+
+OBJECT:RussiaVehicleMsta
+"2S19M2 Msta-S"
+END
+
+CONTROLBAR:ConstructRussiaVehicleMsta
+"&Msta-S"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleMsta
+"Heavy 152mm self-propelled howitzer."
+END
+
+OBJECT:RussiaJetMigKAB
+"MiG-29 UMPK"
+END
+
+CONTROLBAR:ConstructRussiaJetMigKAB
+"&MiG UMPK"
+END
+
+CONTROLBAR:ToolTipRussiaJetMigKAB
+"Strikes from long standoff range with heavy, inaccurate UMPK KAB area glide bombs."
+END
+
+OBJECT:RussiaVehicleKa52
+"Ka-52 Alligator"
+END
+
+CONTROLBAR:ConstructRussiaVehicleKa52
+"&Ka-52"
+END
+
+CONTROLBAR:ToolTipRussiaVehicleKa52
+"Heavy attack helicopter armed with autocannon and Vikhr missiles."
+END
+
+OBJECT:RussiaJetSu57
+"Su-57 Felon"
+END
+
+CONTROLBAR:ConstructRussiaJetSu57
+"&Su-57"
+END
+
+CONTROLBAR:ToolTipRussiaJetSu57
+"Stealth air-superiority and strike fighter."
+END
+
+UPGRADE:RussiaRatnik
+"Ratnik Gear"
+END
+
+CONTROLBAR:UpgradeRussiaRatnik
+"&Ratnik Gear"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaRatnik
+"Upgrades Motor Riflemen with improved AK-12 optics and ammunition."
+END
+
+UPGRADE:RussiaReliktEra
+"Relikt ERA"
+END
+
+CONTROLBAR:UpgradeRussiaReliktEra
+"&Relikt ERA"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaReliktEra
+"Increases armor durability of T-72B3M and T-90M tanks."
+END
+
+UPGRADE:RussiaExtendedRange
+"Rocket-Assisted Shells"
+END
+
+CONTROLBAR:UpgradeRussiaExtendedRange
+"&Extended Range"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaExtendedRange
+"Increases attack range of Msta-S and Solntsepek."
+END
+
+UPGRADE:RussiaGlonassGuidance
+"GLONASS Targeting"
+END
+
+CONTROLBAR:UpgradeRussiaGlonassGuidance
+"&GLONASS Targeting"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaGlonassGuidance
+"Improves radar-guided hit chance for Msta-S, Kornet, and Su-57."
+END
+
+UPGRADE:RussiaUmpkKit
+"UMPK Glide Kits"
+END
+
+CONTROLBAR:UpgradeRussiaUmpkKit
+"&UMPK Glide Kits"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaUmpkKit
+"Increases MiG UMPK glide bomb standoff range, blast radius, and damage."
+END
+
+UPGRADE:RussiaWarheads
+"Heavy Warheads"
+END
+
+CONTROLBAR:UpgradeRussiaWarheads
+"&Heavy Warheads"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaWarheads
+"Increases weapon damage across Russian forces."
+END
+
+UPGRADE:RussiaFortification
+"Reinforced Concrete"
+END
+
+CONTROLBAR:UpgradeRussiaFortification
+"&Fortification"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaFortification
+"Increases hit points of all Russian structures."
+END
+
+UPGRADE:RussiaTargetClassification
+"Target Classification"
+END
+
+CONTROLBAR:UpgradeRussiaTargetClassification
+"&Target Classification"
+END
+
+CONTROLBAR:ToolTipUpgradeRussiaTargetClassification
+"Identifies enemy unit types inside radar coverage."
+END
+
+UPGRADE:RussiaLaserDesignation
+"Laser Designation"
+END
+
+UPGRADE:RussiaEarlyWarning
+"Early Warning"
+END
+
+UPGRADE:RussiaForwardRadar
+"Forward Radar"
+END
+
+SCIENCE:RussiaLaserDesignation
+"Laser Designation"
+END
+
+CONTROLBAR:ToolTipRussiaScienceLaserDesignation
+"Spetsnaz teams paint targets as radar coverage."
+END
+
+SCIENCE:RussiaEarlyWarning
+"Early Warning"
+END
+
+CONTROLBAR:ToolTipRussiaScienceEarlyWarning
+"Increases radar coverage radius by 25 percent."
+END
+
+SCIENCE:RussiaOrlanRecon
+"Orlan-10 Recon"
+END
+
+CONTROLBAR:ToolTipRussiaScienceOrlanRecon
+"Deploys an Orlan-10 UAV providing radar coverage over the target area."
+END
+
+CONTROLBAR:RussiaOrlanRecon
+"Orlan Recon"
+END
+
+CONTROLBAR:TooltipRussiaOrlanRecon
+"Deploys an Orlan-10 UAV providing radar coverage over the target area."
+END
+
+SCIENCE:RussiaForwardRadar
+"Forward Radar"
+END
+
+CONTROLBAR:ToolTipRussiaScienceForwardRadar
+"Expands Radar Mast coverage by 50 percent."
+END
+
+SCIENCE:RussiaLancetSwarm
+"Lancet Swarm"
+END
+
+SCIENCE:RussiaLancetSwarm2
+"Lancet Swarm II"
+END
+
+SCIENCE:RussiaLancetSwarm3
+"Lancet Swarm III"
+END
+
+CONTROLBAR:ToolTipRussiaScienceLancetSwarm
+"Launches loitering Lancet drones against targets in the area (1, 3, or 5 drones)."
+END
+
+CONTROLBAR:RussiaLancetSwarm
+"Lancet Swarm"
+END
+
+CONTROLBAR:TooltipRussiaLancetSwarm
+"Launches loitering Lancet drones against targets in the area."
+END
+
+SCIENCE:RussiaVdvDrop
+"VDV Paradrop"
+END
+
+SCIENCE:RussiaVdvDrop2
+"VDV Paradrop II"
+END
+
+SCIENCE:RussiaVdvDrop3
+"VDV Paradrop III"
+END
+
+CONTROLBAR:ToolTipRussiaScienceVdvDrop
+"Paradrops motor riflemen, Kornet teams, and at rank 3 a BTR-82A."
+END
+
+CONTROLBAR:RussiaVdvDrop
+"VDV Paradrop"
+END
+
+CONTROLBAR:TooltipRussiaVdvDrop
+"Paradrops Russian airborne forces at the target location."
+END
+
+SCIENCE:RussiaElectronicWarfare
+"Krasukha Jamming"
+END
+
+CONTROLBAR:ToolTipRussiaScienceElectronicWarfare
+"Blinds enemy radar and jams electronics in the target zone for 30 seconds."
+END
+
+CONTROLBAR:RussiaElectronicWarfare
+"EW Jamming"
+END
+
+CONTROLBAR:TooltipRussiaElectronicWarfare
+"Blinds enemy radar and jams electronics in the target zone for 30 seconds."
+END
+
+SCIENCE:RussiaGlonassGuidance
+"GLONASS Satellite"
+END
+
+CONTROLBAR:ToolTipRussiaScienceGlonassGuidance
+"Provides map-wide radar coverage for 45 seconds."
+END
+
+CONTROLBAR:RussiaGlonassGuidance
+"GLONASS"
+END
+
+CONTROLBAR:TooltipRussiaGlonassGuidance
+"Provides map-wide radar coverage for 45 seconds."
+END
+
+SCIENCE:RussiaIskanderStrike
+"Iskander-M Strike"
+END
+
+CONTROLBAR:ToolTipRussiaScienceIskanderStrike
+"Fires a radar-guided 9M723 Iskander-M ballistic missile at the target area."
+END
+
+CONTROLBAR:RussiaIskanderStrike
+"Iskander Strike"
+END
+
+CONTROLBAR:TooltipRussiaIskanderStrike
+"Fires a radar-guided 9M723 Iskander-M ballistic missile at the target area."
+END
+
+SCIENCE:RussiaSpetsnazRaid
+"Spetsnaz Drop"
+END
+
+CONTROLBAR:ToolTipRussiaScienceSpetsnazRaid
+"Drops a Spetsnaz agent with Kornet and rifle support."
+END
+
+CONTROLBAR:RussiaSpetsnazRaid
+"Spetsnaz Drop"
+END
+
+CONTROLBAR:TooltipRussiaSpetsnazRaid
+"Drops a Spetsnaz agent with Kornet and rifle support."
+END
+
+SCIENCE:RussiaTalent6A
+"Industrial Base"
+END
+
+CONTROLBAR:ToolTipRussiaTalent6A
+"Structures cost 15 percent less."
+END
+
+SCIENCE:RussiaTalent6B
+"Mass Conscription"
+END
+
+CONTROLBAR:ToolTipRussiaTalent6B
+"Infantry costs 15 percent less."
+END
+
+SCIENCE:RussiaTalent7A
+"T-90M Armor"
+END
+
+CONTROLBAR:ToolTipRussiaTalent7A
+"T-90M Proryv gains 150 hit points."
+END
+
+SCIENCE:RussiaTalent7B
+"Air Recon"
+END
+
+CONTROLBAR:ToolTipRussiaTalent7B
+"Ka-52 and Su-57 gain 25 percent sight range."
+END
+
+SCIENCE:RussiaTalent8A
+"Heavy Bunkers"
+END
+
+CONTROLBAR:ToolTipRussiaTalent8A
+"Fortified Bunker gains 300 hit points."
+END
+
+SCIENCE:RussiaTalent8B
+"AT Crews"
+END
+
+CONTROLBAR:ToolTipRussiaTalent8B
+"Kornet AT Team gains 40 hit points."
+END
+
+SCIENCE:RussiaTalent9A
+"Lancet Salvo"
+END
+
+CONTROLBAR:ToolTipRussiaTalent9A
+"Lancet Swarm launches 2 extra drones."
+END
+
+SCIENCE:RussiaTalent9B
+"Airborne Corps"
+END
+
+CONTROLBAR:ToolTipRussiaTalent9B
+"VDV Paradrop drops 4 extra troops."
+END
+
+SCIENCE:RussiaTalent10A
+"Cluster Payload"
+END
+
+CONTROLBAR:ToolTipRussiaTalent10A
+"Iskander-M blast radius increases by 25 percent."
+END
+
+SCIENCE:RussiaTalent10B
+"Elite Spetsnaz"
+END
+
+CONTROLBAR:ToolTipRussiaTalent10B
+"Spetsnaz agents are trained as veterans."
+END
