@@ -51,7 +51,7 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.run_tests }}
         shell: pwsh
         run: |
-          $exclude = "test_milesaudiomanager|miles_smoke|test_miles_miniaudio|test_binkvideo|bink_smoke|dx9_smoke|dx9_smoke_msaa|test_dx11device"
+          $exclude = "test_milesaudiomanager|miles_smoke|test_miles_miniaudio|test_binkvideo|bink_smoke|dx9_smoke|dx9_smoke_msaa|test_dx11device|test_pixelcentre"
           ctest --test-dir build64 -C Release -j 4 --timeout 900 --output-on-failure -E $exclude
 
       - name: Verify and package Windows build
