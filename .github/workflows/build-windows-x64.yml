@@ -27,11 +27,13 @@ permissions:
 jobs:
   build-windows-x64:
     runs-on: windows-2022
+    timeout-minutes: 60
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Fetch vendored sources
+        timeout-minutes: 10
         shell: pwsh
         env:
           ZHR_NO_ADDONS: ${{ (github.event_name != 'workflow_dispatch' || inputs.no_addons) && '1' || '0' }}

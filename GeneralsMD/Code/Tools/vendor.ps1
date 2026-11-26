@@ -29,7 +29,20 @@ function Get-File($url, $destination) {
   if (Test-Path $destination) { return $destination }
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $destination) | Out-Null
   Step "downloading $(Split-Path -Leaf $destination)"
-  Invoke-WebRequest -Uri $url -OutFile $destination -UseBasicParsing
+  $part = "$destination.part"
+  if (Test-Path $part) { Remove-Item $part -Force -ErrorAction SilentlyContinue }
+  $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
+  if ($curl) {
+    & $curl.Source -fsSL --retry 3 --retry-delay 2 --connect-timeout 20 --max-time 180 $url -o $part
+    if ($LASTEXITCODE -ne 0 -or -not (Test-Path $part)) {
+      Remove-Item $part -Force -ErrorAction SilentlyContinue
+      throw "could not download $url (curl exit $LASTEXITCODE)"
+    }
+    Move-Item $part $destination -Force
+  } else {
+    Invoke-WebRequest -Uri $url -OutFile $part -UseBasicParsing -TimeoutSec 60
+    Move-Item $part $destination -Force
+  }
   return $destination
 }
 
@@ -65,7 +78,13 @@ function Get-TopLevel($folder, [string[]] $extensions) {
 function Install-Zlib {
   $destination = Join-Path $libraries 'Source\Compression\ZLib'
   if ((Test-Path (Join-Path $destination 'deflate.c')) -and -not $Force) { return }
-  $archive = Get-File 'https://zlib.net/fossils/zlib-1.1.4.tar.gz' (Join-Path $work 'zlib-1.1.4.tar.gz')
+  $archivePath = Join-Path $work 'zlib-1.1.4.tar.gz'
+  try {
+    $archive = Get-File 'https://zlib.net/fossils/zlib-1.1.4.tar.gz' $archivePath
+  } catch {
+    Step "zlib.net failed ($($_.Exception.Message)), falling back to GitHub mirror"
+    $archive = Get-File 'https://github.com/madler/zlib/archive/refs/tags/v1.1.4.tar.gz' $archivePath
+  }
   $source = Expand-Source $archive 'zlib'
   Copy-Files (Get-TopLevel $source @('.c', '.h') | Where-Object { $_.Name -ne 'maketree.c' }) $destination
   Step "zlib 1.1.4 -> Libraries\Source\Compression\ZLib"
