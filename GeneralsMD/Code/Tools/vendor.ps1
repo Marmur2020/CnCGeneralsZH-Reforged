@@ -54,7 +54,31 @@ function Expand-Source($archive, $name) {
   New-Item -ItemType Directory -Force -Path $target | Out-Null
   Step "unpacking $name"
   if ($archive -match '\.tar\.(gz|bz2)$') {
-    tar -xf $archive -C $target
+    $extracted = $false
+    $cmake = Get-Command cmake -ErrorAction SilentlyContinue
+    if ($cmake) {
+      Push-Location $target
+      try {
+        & $cmake.Source -E tar xf $archive
+        if ($LASTEXITCODE -eq 0) { $extracted = $true }
+      } finally {
+        Pop-Location
+      }
+    }
+    if (-not $extracted) {
+      $py = Get-Command python -ErrorAction SilentlyContinue
+      if (-not $py) { $py = Get-Command python3 -ErrorAction SilentlyContinue }
+      if ($py) {
+        & $py.Source -c "import sys, tarfile; tf = tarfile.open(sys.argv[1], 'r:*'); tf.extractall(sys.argv[2]); tf.close()" $archive $target
+        if ($LASTEXITCODE -eq 0) { $extracted = $true }
+      }
+    }
+    if (-not $extracted) {
+      tar -xf $archive -C $target
+      if ($LASTEXITCODE -ne 0) {
+        throw "could not unpack $archive (tar exit $LASTEXITCODE)"
+      }
+    }
   } else {
     Expand-Archive -Path $archive -DestinationPath $target -Force
   }
